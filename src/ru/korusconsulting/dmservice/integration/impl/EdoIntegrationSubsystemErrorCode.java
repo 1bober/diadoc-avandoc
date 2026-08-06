@@ -1,0 +1,22 @@
+// 
+// Decompiled by Procyon v0.6.0
+// 
+
+package ru.korusconsulting.dmservice.integration.impl;
+
+public enum EdoIntegrationSubsystemErrorCode
+{
+    NO_CONNECTION_SETTINGS_ERROR, 
+    COUNTERAGENT_CALCULATION_ERROR, 
+    COUNTERAGENT_NO_INN_ERROR, 
+    SYSTEM_ERROR, 
+    SYSTEM_UNCONFIGURED, 
+    NO_ACTIVE_CONNECTIONS, 
+    CONNECTION_FAILED, 
+    NO_COUNTERAGENT, 
+    HTTP_UNAUTHORIZED, 
+    HTTP_FORBIDDEN, 
+    BOX_UNAVAILABLE, 
+    INTEGRATION_SYSTEM_ERROR, 
+    COUNTERAGENT_NO_CERTIFICATE;
+}

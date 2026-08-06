@@ -1,0 +1,25 @@
+// 
+// Decompiled by Procyon v0.6.0
+// 
+
+package ru.korusconsulting.service.integration;
+
+import ru.korusconsulting.service.integration.model.attribute.resolvers.IEdoIntegrationAttributesByOperationContextAttributeResolver;
+import ru.korusconsulting.service.integration.configuration.IEdoIntegrationAttributeMappingByOperationContextAttribute;
+import ru.korusconsulting.service.integration.model.attribute.resolvers.IEdoIntegrationAttributesByLinkedObjectResolver;
+import ru.korusconsulting.service.integration.configuration.IEdoIntegrationOutboundMappingByLinkedObject;
+import ru.korusconsulting.service.integration.model.attribute.resolvers.IEdoIntegrationAttributesByFixedValueResolver;
+import ru.korusconsulting.service.integration.configuration.IEdoIntegrationAttributeMappingByFixedValue;
+import ru.korusconsulting.service.integration.model.attribute.resolvers.IEdoIntegrationAttributesByAttributeResolver;
+import ru.korusconsulting.service.integration.configuration.IEdoIntegrationOutboundAttributeMapping;
+
+public interface IEdoIntegrationAttributesResolverFactory
+{
+    IEdoIntegrationAttributesByAttributeResolver createAttributeMappingResolver(final IEdoIntegrationOutboundAttributeMapping p0, final IEdoIntegrationAttributesResolverFactory p1);
+    
+    IEdoIntegrationAttributesByFixedValueResolver createFixedValueResolver(final IEdoIntegrationAttributeMappingByFixedValue p0, final IEdoIntegrationAttributesResolverFactory p1);
+    
+    IEdoIntegrationAttributesByLinkedObjectResolver createByLinkedObjectMappingResolver(final IEdoIntegrationOutboundMappingByLinkedObject p0, final IEdoIntegrationAttributesResolverFactory p1);
+    
+    IEdoIntegrationAttributesByOperationContextAttributeResolver createByOperationContextAttributeResolver(final IEdoIntegrationAttributeMappingByOperationContextAttribute p0, final IEdoIntegrationAttributesResolverFactory p1);
+}
